@@ -1,0 +1,27 @@
+
+<!doctype html>
+<html lang="fr">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Zone paiements — DSB</title>
+<style>body{font-family:Arial;padding:20px;background:#fbf7f0} .box{max-width:700px;margin:40px auto;background:#fff;padding:20px;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.06)}</style>
+</head><body>
+<div class="box">
+  <h1>Zone paiements (privée)</h1>
+  <p>Cette zone est protégée. Entrez le mot de passe pour voir les informations.</p>
+  <label for="pw">Mot de passe :</label><input id="pw" type="password" style="padding:8px;margin:8px 0;display:block;width:100%;max-width:320px">
+  <button id="go" style="padding:8px 12px;margin-top:8px">Valider</button>
+  <p id="msg" style="color:#d02828;margin-top:10px"></p>
+  <div id="content" style="display:none;margin-top:18px">
+    <h3>Informations de paiement</h3>
+    <p><strong>PayPal :</strong> paypal.me/DSB-officiel</p>
+    <p><strong>IBAN :</strong> [à remplir]</p>
+    <p><strong>Orange Money :</strong> +223 73760565</p>
+  </div>
+</div>
+<script>
+const PASSWORD = "Aoudou26@";
+document.getElementById('go').addEventListener('click', ()=>{
+  const val = document.getElementById('pw').value;
+  if(val === PASSWORD){ document.getElementById('content').style.display='block'; document.getElementById('msg').textContent=''; } else { document.getElementById('msg').textContent='Mot de passe incorrect'; }
+});
+</script>
+</body></html>
