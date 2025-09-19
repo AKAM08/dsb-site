@@ -1,1 +1,205 @@
-<!doctype html><html lang='fr'><head><meta charset='utf-8'><title>DSB</title></head><body><h1>DSB — La passerelle entre Dubaï et vous</h1></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DSB — La passerelle entre Dubaï et vous</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo-box">📦</div>
+        <div>
+          <div class="brand-title">D S B</div>
+          <div class="brand-sub">Dubaï Sans Bouger</div>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="langBtn" class="lang-btn" aria-label="Toggle language">EN</button>
+        <button id="menuToggle" class="menu-toggle" aria-label="Open menu">☰</button>
+      </div>
+      <nav id="mainNav" class="main-nav">
+        <a href="#home" data-i18n="nav.home">Accueil</a>
+        <a href="#about" data-i18n="nav.about">Présentation</a>
+        <a href="#products" data-i18n="nav.products">Produits</a>
+        <a href="#vehicles" data-i18n="nav.vehicles">Véhicules</a>
+        <a href="about.html">À propos</a>
+        <a href="payments.html">Espace privé</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1 data-i18n="hero.title">La passerelle entre Dubaï et vous</h1>
+          <p data-i18n="hero.lead">DSB rend accessible tout ce qui vient de Dubaï — parfums, abayas, véhicules, pièces et immobilier — sans bouger.</p>
+          <div class="hero-cta">
+            <a class="btn" href="#products" data-i18n="hero.products">Voir les produits</a>
+            <a class="btn ghost" href="#about" data-i18n="hero.cta">Présentation</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="card-box" id="cardBox" aria-hidden="true">
+            <div class="face front">D S B</div>
+            <div class="face back">Dubaï<br>Sans<br>Bouger</div>
+            <div class="label">D S B — M2A</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container section about">
+      <h2 data-i18n="about.title">Présentation</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <h3 data-i18n="about.head">Qui sommes‑nous ?</h3>
+          <p data-i18n="about.p1">DSB (Dubaï Sans Bouger) a pour vision de rendre accessibles les produits, services et opportunités de Dubaï directement chez vous. Nous connectons Dubaï au monde en proposant un service fiable à prix accessibles.</p>
+          <p data-i18n="about.p2">Notre objectif : simplicité, transparence et qualité — permettre à chacun d'acheter facilement depuis Dubaï sans se déplacer.</p>
+        </div>
+        <div class="about-visual">
+          <img src="assets/dubai_skyline.svg" alt="Dubai skyline">
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="container section products">
+      <h2 data-i18n="products.title">Produits</h2>
+      <div class="product-grid">
+        <!-- Parfums de niche -->
+        <article class="prod-card" data-category="parfum-niche">
+          <div class="carousel-mini">
+            <img src="assets/perfume_niche_1.svg" alt="Parfum niche">
+            <img src="assets/perfume_niche_2.svg" alt="Parfum niche 2">
+          </div>
+          <h4>Parfums de niche</h4>
+          <p class="muted">Sélections rares — flacons d'exception.</p>
+          <button class="open-product" data-title="Parfum de niche - Exemple">Voir</button>
+        </article>
+        <!-- Parfums de Dubaï -->
+        <article class="prod-card" data-category="parfum-dubai">
+          <div class="carousel-mini">
+            <img src="assets/perfume_dubai_1.svg" alt="Parfum dubai">
+            <img src="assets/perfume_dubai_2.svg" alt="Parfum dubai 2">
+          </div>
+          <h4>Parfums de Dubaï</h4>
+          <p class="muted">Parfums orientaux populaires.</p>
+          <button class="open-product" data-title="Parfum Dubai - Exemple">Voir</button>
+        </article>
+        <!-- Abayas -->
+        <article class="prod-card" data-category="abaya">
+          <div class="carousel-mini">
+            <img src="assets/abaya_1.svg" alt="Abaya">
+            <img src="assets/abaya_2.svg" alt="Abaya 2">
+          </div>
+          <h4>Abayas</h4>
+          <p class="muted">Abayas élégantes et modernes.</p>
+          <button class="open-product" data-title="Abaya - Exemple">Voir</button>
+        </article>
+        <!-- Bazar -->
+        <article class="prod-card" data-category="bazar">
+          <div class="carousel-mini">
+            <img src="assets/bazar_1.svg" alt="Bazar">
+            <img src="assets/bazar_2.svg" alt="Bazar 2">
+          </div>
+          <h4>Bazar & Fournitures</h4>
+          <p class="muted">Articles variés pour la maison et le commerce.</p>
+          <button class="open-product" data-title="Bazar - Exemple">Voir</button>
+        </article>
+        <!-- Pièces -->
+        <article class="prod-card" data-category="parts">
+          <div class="carousel-mini">
+            <img src="assets/parts_1.svg" alt="Pièces">
+            <img src="assets/parts_2.svg" alt="Pièces 2">
+          </div>
+          <h4>Pièces de véhicules</h4>
+          <p class="muted">Pièces d'origine et accessoires.</p>
+          <button class="open-product" data-title="Pièce - Exemple">Voir</button>
+        </article>
+        <!-- Immobilier -->
+        <article class="prod-card" data-category="realestate">
+          <div class="carousel-mini">
+            <img src="assets/real_estate_1.svg" alt="Immobilier">
+            <img src="assets/real_estate_2.svg" alt="Immobilier 2">
+          </div>
+          <h4>Immobilier</h4>
+          <p class="muted">Investissements et locations à Dubaï.</p>
+          <button class="open-product" data-title="Immobilier - Exemple">Voir</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="vehicles" class="container section vehicles">
+      <h2 data-i18n="vehicles.title">Véhicules</h2>
+      <p class="muted">Exemples récents et disponibles.</p>
+      <div class="carousel" id="vehicleCarousel">
+        <button class="carousel-control left" data-dir="-1" aria-label="Prev">‹</button>
+        <div class="carousel-track">
+          <div class="slide">
+            <img src="assets/landcruiser.svg" alt="Land Cruiser V8">
+            <div class="slide-caption">Land Cruiser V8 — récent</div>
+          </div>
+          <div class="slide">
+            <img src="assets/mercedes_g.svg" alt="Mercedes Classe G">
+            <div class="slide-caption">Mercedes Classe G — sélection</div>
+          </div>
+        </div>
+        <button class="carousel-control right" data-dir="1" aria-label="Next">›</button>
+      </div>
+    </section>
+
+    <section id="contact" class="container section contact">
+      <h2 data-i18n="contact.title">Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p>📧 <strong data-i18n="contact.emailLabel">Email</strong> : <a href="mailto:dubaisansbouger@gmail.com">dubaisansbouger@gmail.com</a></p>
+          <p>📱 <strong data-i18n="contact.whatsappLabel">WhatsApp</strong> : <a href="https://wa.me/22373760565" target="_blank">+223 73760565</a></p>
+          <p class="muted" data-i18n="contact.reply">Réponse rapide via WhatsApp.</p>
+        </div>
+
+        <div class="contact-form">
+          <form action="https://formspree.io/f/mandrnlq" method="POST">
+            <input type="hidden" name="_subject" value="Message DSB via site">
+            <label for="name" data-i18n="form.name">Nom</label>
+            <input id="name" name="name" required>
+            <label for="email" data-i18n="form.email">Email</label>
+            <input id="email" name="_replyto" type="email" required>
+            <label for="message" data-i18n="form.message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button class="btn" type="submit" data-i18n="form.send">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div>© 2025 — DSB (Dubaï Sans Bouger) | Par M2A</div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Product modal template -->
+  <div id="productModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close">✕</button>
+      <div class="modal-body">
+        <img id="modalImage" src="assets/perfume_niche_1.svg" alt="product" />
+        <h3 id="modalTitle">Titre produit</h3>
+        <p id="modalDesc">Description...</p>
+        <p id="modalPrice">Prix : --</p>
+        <div class="modal-actions">
+          <a id="whatsappOrder" class="btn" href="#" target="_blank">Commander via WhatsApp</a>
+          <button id="showPayments" class="btn ghost">Voir zone paiements (privée)</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
