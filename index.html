@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>DSB — La passerelle entre Dubaï et vous</title>
+<meta name="description" content="DSB — Dubaï Sans Bouger"/>
+<style>
+:root{--bg:#fbf7f0;--card:#fff;--accent:#d2b48c;--muted:#6b6b6b;--text:#111}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+.container{max-width:1100px;margin:0 auto;padding:20px}
+.site-header{display:flex;align-items:center;justify-content:space-between;padding:14px;background:rgba(255,255,255,0.85);backdrop-filter:blur(6px);position:sticky;top:0;z-index:50}
+.brand{display:flex;align-items:center;gap:12px}
+.logo-box{width:64px;height:64px;border-radius:10px;background:linear-gradient(#e8d9c0,#d2b48c);display:grid;place-items:center;font-weight:800}
+.main-nav{display:flex;gap:12px}
+.main-nav a{text-decoration:none;color:var(--muted);font-weight:700;padding:8px;border-radius:8px}
+.lang-btn{border:1px solid rgba(0,0,0,0.06);padding:6px 10px;border-radius:8px;cursor:pointer}
+
+.hero{display:flex;justify-content:center;align-items:center;padding:44px 0 24px}
+.carton-wrap{width:520px;max-width:92%}
+.carton{border-radius:14px;overflow:visible;box-shadow:0 20px 50px rgba(0,0,0,0.15)}
+
+/* mirror */
+.carton-mirror{transform:scaleY(-1);opacity:.2;filter:blur(2px);mask-image:linear-gradient(to bottom, rgba(0,0,0,.6), rgba(0,0,0,0));margin-top:8px}
+
+.section{padding:48px 0}
+.about-grid{display:grid;grid-template-columns:1fr 420px;gap:18px;align-items:center}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.prod-card{background:var(--card);padding:12px;border-radius:10px;box-shadow:0 8px 18px rgba(0,0,0,0.06);text-align:center}
+.prod-card img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+.carousel{display:flex;align-items:center;gap:12px}
+.carousel-track{display:flex;gap:14px;overflow:hidden}
+.slide{min-width:320px;background:var(--card);padding:12px;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,0.06)}
+
+/* responsive */
+@media(max-width:900px){.about-grid{grid-template-columns:1fr}.product-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.main-nav{display:none}.product-grid{grid-template-columns:1fr}.carton-wrap{width:360px}}
+.edit-badge{position:fixed;right:14px;bottom:14px;background:var(--accent);color:#111;padding:10px 12px;border-radius:10px;font-weight:700;cursor:pointer}
+</style>
+</head><body>
+<header class="site-header"><div class="container" style="display:flex;align-items:center;justify-content:space-between">
+  <div class="brand"><div class="logo-box">📦</div><div><div style="font-weight:800;letter-spacing:6px">D S B</div><div style="font-size:12px;color:var(--muted)">Dubaï Sans Bouger</div></div></div>
+  <div style="display:flex;gap:12px;align-items:center"><nav class="main-nav"><a href="#home">Accueil</a><a href="#about">Présentation</a><a href="#products">Produits</a><a href="#vehicles">Véhicules</a><a href="#contact">Contact</a></nav><button id="langBtn" class="lang-btn">EN</button></div>
+</div></header>
+
+<main>
+<section id="home" class="hero"><div class="container"><div class="carton-wrap">
+  <div class="carton"><img src="assets/carton_realistic.svg" alt="Carton DSB"></div>
+  <div class="carton-mirror"><img src="assets/carton_realistic.svg" alt="" /></div>
+</div></div></section>
+
+<section id="about" class="section container about-grid"><div><h2>Présentation</h2><p>DSB rend accessible tout ce qui vient de Dubaï — parfums, abayas, véhicules, pièces et immobilier — sans bouger.</p></div><div><img src="assets/dubai_skyline.svg" alt="dubai" style="width:100%;border-radius:10px"></div></section>
+
+<section id="products" class="section container"><h2>Produits</h2><div class="product-grid">
+  <div class="prod-card"><img src="assets/perfume_niche_1.svg" alt=""><div style="font-weight:800;margin-top:8px">Parfums de niche</div><div style="color:var(--muted)">Sélections rares</div></div>
+  <div class="prod-card"><img src="assets/perfume_dubai_1.svg" alt=""><div style="font-weight:800;margin-top:8px">Parfums Dubaï</div><div style="color:var(--muted)">Senteurs orientales</div></div>
+  <div class="prod-card"><img src="assets/abaya_1.svg" alt=""><div style="font-weight:800;margin-top:8px">Abayas</div><div style="color:var(--muted)">Elégance</div></div>
+  <div class="prod-card"><img src="assets/bazar_1.svg" alt=""><div style="font-weight:800;margin-top:8px">Bazar</div><div style="color:var(--muted)">Articles variés</div></div>
+  <div class="prod-card"><img src="assets/parts_1.svg" alt=""><div style="font-weight:800;margin-top:8px">Pièces</div><div style="color:var(--muted)">Pièces & accessoires</div></div>
+  <div class="prod-card"><img src="assets/real_estate_1.svg" alt=""><div style="font-weight:800;margin-top:8px">Immobilier</div><div style="color:var(--muted)">Investissements</div></div>
+</div></section>
+
+<section id="vehicles" class="section container"><h2>Véhicules</h2><div class="carousel"><button class="carousel-control" data-dir="-1">‹</button><div class="carousel-track" id="vehicleTrack"><div class="slide"><img src="assets/landcruiser.svg" style="width:100%;height:200px;object-fit:cover;border-radius:8px"><div style="margin-top:8px">Land Cruiser V8 — récent</div></div><div class="slide"><img src="assets/mercedes_g.svg" style="width:100%;height:200px;object-fit:cover;border-radius:8px"><div style="margin-top:8px">Mercedes Classe G</div></div></div><button class="carousel-control" data-dir="1">›</button></div></section>
+
+<section id="contact" class="section container"><h2>Contact</h2><p>📧 dubaisansbouger@gmail.com</p><p>📱 +223 73760565 (WhatsApp)</p></section>
+
+<footer class="site-footer" style="padding:26px 0;text-align:center;color:#6b6b6b">© 2025 — DSB (Dubaï Sans Bouger) | Par M2A</footer>
+</main>
+
+<button id="editToggle" class="edit-badge">Modifier</button>
+
+<script>
+// simple language toggle (fr/en labels)
+const langBtn=document.getElementById('langBtn'); let lang=localStorage.getItem('dsb_lang')||'fr';
+langBtn.addEventListener('click',()=>{lang = (lang==='fr')?'en':'fr'; localStorage.setItem('dsb_lang',lang); if(lang==='en'){document.querySelectorAll('h2').forEach(h=>{if(h.textContent==='Présentation') h.textContent='About'; if(h.textContent==='Produits') h.textContent='Products'; if(h.textContent==='Véhicules') h.textContent='Vehicles'; if(h.textContent==='Contact') h.textContent='Contact';}); document.querySelector('.brand-sub').textContent='Dubai Without Moving';} else {location.reload();}});
+
+// carousel controls
+document.querySelectorAll('.carousel-control').forEach(btn=>{btn.addEventListener('click',()=>{const dir=Number(btn.dataset.dir);const track=document.getElementById('vehicleTrack');const slide=track.querySelector('.slide');const width=slide.getBoundingClientRect().width+14;track.scrollBy({left:dir*width,behavior:'smooth'})})});
+
+// edit mode (contenteditable)
+const editToggle=document.getElementById('editToggle'); let edit=false;
+editToggle.addEventListener('click',()=>{edit=!edit; editToggle.textContent=edit?'Enregistrer':'Modifier'; document.querySelectorAll('.prod-card .prod-title, .prod-card .muted').forEach(el=>el?.setAttribute('contenteditable', edit)); document.querySelectorAll('.prod-card div[style]').forEach(el=>el?.setAttribute('contenteditable', edit));});
+</script>
+</body></html>
