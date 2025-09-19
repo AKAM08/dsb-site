@@ -1,115 +1,176 @@
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>DSB — La passerelle entre Dubaï et vous</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSB — Dubaï Sans Bouger</title>
+  <style>
+    /* === RESET === */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #f0c000;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: url("assets/dubai_skyline.jpg") no-repeat center/cover;
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      background: rgba(0,0,0,0.5);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    .section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+    }
+
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <div class="logo-box">📦</div>
-        <div>
-          <div class="brand-title">D S B</div>
-          <div class="brand-sub">Dubaï Sans Bouger</div>
-        </div>
-      </div>
-      <div class="controls">
-        <button id="langBtn" class="lang-btn" aria-label="Toggle language">EN</button>
-        <button id="menuToggle" class="menu-toggle" aria-label="Open menu">☰</button>
-      </div>
-      <nav id="mainNav" class="main-nav">
-        <a href="#home">Accueil</a>
-        <a href="#about">Présentation</a>
-        <a href="#products">Produits</a>
-        <a href="#vehicles">Véhicules</a>
-        <a href="about.html">À propos</a>
-        <a href="payments.html">Espace privé</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+
+  <header>
+    <h1>📦 D S B — Dubaï Sans Bouger</h1>
+    <nav>
+      <a href="#home">Accueil</a>
+      <a href="#presentation">Présentation</a>
+      <a href="#produits">Produits</a>
+      <a href="#vehicules">Véhicules</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h1>La passerelle entre Dubaï et vous</h1>
-          <p>DSB rend accessible tout ce qui vient de Dubaï — parfums, abayas, véhicules, pièces et immobilier — sans bouger.</p>
-          <div class="hero-cta">
-            <a class="btn" href="#products">Voir les produits</a>
-            <a class="btn ghost" href="#about">Présentation</a>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <img src="assets/dubai_skyline.jpg" alt="Dubai skyline">
-        </div>
-      </div>
-    </section>
+  <section class="hero" id="home">
+    <h2>La passerelle entre Dubaï et vous 🌍</h2>
+  </section>
 
-    <section id="products" class="container section products">
-      <h2>Produits</h2>
-      <div class="product-grid">
-        <article class="prod-card">
-          <img src="assets/perfume_niche_1.jpg" alt="Parfum niche">
-          <h4>Parfums de niche</h4>
-          <p>Sélections rares — flacons d'exception.</p>
-        </article>
-        <article class="prod-card">
-          <img src="assets/perfume_dubai_1.jpg" alt="Parfum dubai">
-          <h4>Parfums de Dubaï</h4>
-          <p>Parfums orientaux populaires.</p>
-        </article>
-        <article class="prod-card">
-          <img src="assets/abaya_1.jpg" alt="Abaya">
-          <h4>Abayas</h4>
-          <p>Abayas élégantes et modernes.</p>
-        </article>
-        <article class="prod-card">
-          <img src="assets/bazar_1.jpg" alt="Bazar">
-          <h4>Bazar & Fournitures</h4>
-          <p>Articles variés pour la maison et le commerce.</p>
-        </article>
-        <article class="prod-card">
-          <img src="assets/pieces_1.jpg" alt="Pièces">
-          <h4>Pièces de véhicules</h4>
-          <p>Pièces d'origine et accessoires.</p>
-        </article>
-        <article class="prod-card">
-          <img src="assets/immobilier_1.jpg" alt="Immobilier">
-          <h4>Immobilier</h4>
-          <p>Investissements et locations à Dubaï.</p>
-        </article>
-      </div>
-    </section>
+  <section class="section" id="presentation">
+    <h2>Qui sommes-nous ?</h2>
+    <p>
+      DSB rend accessibles les produits, services et opportunités de Dubaï directement chez vous.
+      Simplicité, transparence et qualité.
+    </p>
+  </section>
 
-    <section id="vehicles" class="container section vehicles">
-      <h2>Véhicules</h2>
-      <div class="carousel">
-        <div class="slide">
-          <img src="assets/landcruiser.jpg" alt="Land Cruiser V8">
-          <p>Land Cruiser V8 — récent</p>
-        </div>
-        <div class="slide">
-          <img src="assets/mercedes_gclass.jpg" alt="Mercedes Classe G">
-          <p>Mercedes Classe G — sélection</p>
-        </div>
+  <section class="section" id="produits">
+    <h2>Nos Produits</h2>
+    <div class="products">
+      <div class="product">
+        <img src="assets/perfume_niche_1.jpg" alt="Parfum de niche">
+        <h3>Parfum de niche</h3>
+        <p>Sélections rares — flacons d’exception.</p>
       </div>
-    </section>
-
-    <section id="contact" class="container section contact">
-      <h2>Contact</h2>
-      <p>📧 Email : <a href="mailto:dubaisansbouger@gmail.com">dubaisansbouger@gmail.com</a></p>
-      <p>📱 WhatsApp : <a href="https://wa.me/22373760565" target="_blank">+223 73760565</a></p>
-    </section>
-
-    <footer class="site-footer">
-      <div class="container">
-        <div>© 2025 — DSB (Dubaï Sans Bouger) | Par M2A</div>
+      <div class="product">
+        <img src="assets/abaya_1.jpg" alt="Abaya">
+        <h3>Abaya</h3>
+        <p>Abayas élégantes et modernes.</p>
       </div>
-    </footer>
-  </main>
+      <div class="product">
+        <img src="assets/bazar_1.jpg" alt="Bazar">
+        <h3>Bazar & Fournitures</h3>
+        <p>Articles variés pour la maison et le commerce.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="vehicules">
+    <h2>Véhicules</h2>
+    <div class="products">
+      <div class="product">
+        <img src="assets/landcruiser.jpg" alt="Land Cruiser V8">
+        <h3>Land Cruiser V8</h3>
+        <p>Modèle récent et robuste.</p>
+      </div>
+      <div class="product">
+        <img src="assets/mercedes_gclass.jpg" alt="Mercedes Classe G">
+        <h3>Mercedes Classe G</h3>
+        <p>Le luxe et la puissance réunis.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact</h2>
+    <p>📧 Email : dubaisansbouger@gmail.com</p>
+    <p>📱 WhatsApp : +223 73760565</p>
+  </section>
+
+  <footer>
+    © 2025 — DSB (Dubaï Sans Bouger) | Par M2A
+  </footer>
+
 </body>
 </html>
+
 
