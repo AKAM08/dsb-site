@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Zone paiements — DSB</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header small">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo-box">📦</div>
+        <div>
+          <div class="brand-title">D S B</div>
+          <div class="brand-sub">Espace privé</div>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1>Zone paiements (protégée)</h1>
+    <div id="pwBox" class="payments-lock">
+      <p>Entrez le mot de passe pour accéder à vos informations privées :</p>
+      <input id="pwInput" type="password" placeholder="Mot de passe" />
+      <button id="pwSubmit" class="btn">Valider</button>
+      <p id="pwMsg" class="muted"></p>
+    </div>
+
+    <div id="paymentsContent" style="display:none;">
+      <h2>Informations de paiement</h2>
+      <p><strong>PayPal :</strong> paypal.me/DSB-officiel</p>
+      <p><strong>Coordonnées bancaires :</strong> IBAN: [votre IBAN ici]</p>
+      <p><strong>Orange Money :</strong> +223 73760565</p>
+      <p><strong>Stripe (info) :</strong> À configurer plus tard</p>
+      <p><em>Conseil : modifiez ces données directement dans <code>payments.html</code> si nécessaire.</em></p>
+    </div>
+  </main>
+
+<script>
+// Client-side password check. Password set by user: Aoudou26@
+(function(){
+  const PASSWORD = "Aoudou26@";
+  const input = document.getElementById('pwInput');
+  const submit = document.getElementById('pwSubmit');
+  const msg = document.getElementById('pwMsg');
+  const content = document.getElementById('paymentsContent');
+  submit.addEventListener('click', ()=>{
+    if(input.value === PASSWORD){
+      msg.textContent = "Accès autorisé. Bienvenue.";
+      document.getElementById('pwBox').style.display = 'none';
+      content.style.display = 'block';
+    } else {
+      msg.textContent = "Mot de passe incorrect.";
+    }
+  });
+})();
+</script>
+</body>
+</html>
